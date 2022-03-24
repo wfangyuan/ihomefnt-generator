@@ -1,0 +1,51 @@
+package ${package}.service;
+
+
+/**
+ * ${comments}
+ *
+ * @author ${author}
+ * @email ${email}
+ * @date ${datetime}
+ */
+public interface ${className}Service {
+
+    /**
+     * 新增
+     *
+     * @param saveCmd
+     */
+    void save(${className}SaveCmd saveCmd);
+
+    /**
+     * 更新
+     *
+     * @param updateCmd
+     */
+    void update(${className}UpdateCmd updateCmd);
+
+    /**
+     * 删除
+     *
+     * @param byIdCmd
+     */
+    void delete(${className}ByIdCmd byIdCmd);
+
+
+    /**
+     * 查询详情
+     *
+     * @param detailCmd
+     */
+    ${className}DetailResponse detail(${className}DetailCmd detailCmd);
+
+
+    /**
+     * 分页查询列表
+     *
+     * @param pageCmd
+     */
+    PageModel<${className}DetailResponse> page(${className}PageCmd pageCmd);
+
+}
+

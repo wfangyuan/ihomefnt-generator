@@ -1,0 +1,65 @@
+package ${package}.service.impl;
+
+import com.alibaba.fastjson.JSON;
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
+import org.apache.commons.collections4.CollectionUtils;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import javax.annotation.Resource;
+import java.util.*;
+
+
+/**
+ * ${comments}
+ *
+ * @author ${author}
+ * @email ${email}
+ * @date ${datetime}
+ */
+
+@Service
+public class ${className}ServiceImpl implements ${className}Service {
+
+    @Resource
+    private ${className}Repository ${classname}Repository;
+
+    @Transactional
+    @Override
+    public void save(${className}SaveCmd saveCmd) {
+
+    }
+
+    @Transactional
+    @Override
+    public void update(${className}UpdateCmd updateCmd) {
+
+    }
+
+    @Transactional
+    @Override
+    public void delete(${className}ByIdCmd byIdCmd) {
+
+    }
+
+    @Override
+    public ${className}DetailResponse detail(${className}DetailQry detailQry) {
+
+    }
+
+    @Override
+    public PageModel<${className}DetailResponse> page(${className}PageQry pageQry) {
+        // 分页查询
+        PageHelper.startPage(pageQry.getPageNo(), pageQry.getPageSize());
+
+        Page<${className}> page =  ${classname}Repository.page${className}(pageQry);
+
+        if (null == page || CollectionUtils.isEmpty(page.getResult())) {
+            return new PageModel<>();
+        }
+
+        return null;
+    }
+}
