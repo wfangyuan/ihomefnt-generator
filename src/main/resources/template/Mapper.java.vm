@@ -1,6 +1,5 @@
 package ${package}.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.github.pagehelper.Page;
 import org.apache.ibatis.annotations.Param;
 
 /**
@@ -13,6 +12,5 @@ import org.apache.ibatis.annotations.Param;
 
 public interface ${className}Mapper extends BaseMapper<${className}> {
 
-    Page<${className}> page${className}(@Param("qry")${className}Qry Qry);
 
 }

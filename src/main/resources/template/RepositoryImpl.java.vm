@@ -1,0 +1,12 @@
+/**
+ * ${comments}
+ *
+ * @author ${author}
+ * @email ${email}
+ * @date ${datetime}
+ */
+
+@Repository
+public class  ${className}RepositoryImpl extends ServiceImpl<${className}Mapper,${className}> implements ${className}Repository{
+
+}

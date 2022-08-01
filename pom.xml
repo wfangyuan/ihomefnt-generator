@@ -6,7 +6,7 @@
 	<artifactId>ihomefnt-generator</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
-	<description>ihomefnt-generator</description>
+	<description>generator-generator</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

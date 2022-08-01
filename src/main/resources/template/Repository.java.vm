@@ -1,10 +1,3 @@
-package ${package}.repository;
-import ${package}.entity.${className};
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.github.pagehelper.Page;
-import org.apache.ibatis.annotations.Param;
-import ${package}.common.vo.request.${className}PageRequest;
-
 /**
  * ${comments}
  *
@@ -13,9 +6,6 @@ import ${package}.common.vo.request.${className}PageRequest;
  * @date ${datetime}
  */
 
-@Repository
-public interface ${className}Repository  extends ServiceImpl<${className}Mapper,${className}> {
-
-    Page<${className}> page${className}(@Param("qry")${className}Qry Qry);
+public interface ${className}Repository  extends IService<${className}> {
 
 }

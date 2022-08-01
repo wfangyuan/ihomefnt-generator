@@ -2,6 +2,7 @@ package ${package}.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.*;
 
 #if(${hasBigDecimal})
@@ -26,9 +27,8 @@ public class ${className} implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 #foreach ($column in $columns)
-	/**
-	 * $column.comments
-	 */
+
+	@ApiModelProperty("$column.comments")
 	#if($column.columnName == $pk.columnName)
 @TableId(value = "id",type = IdType.AUTO)
 	#end
